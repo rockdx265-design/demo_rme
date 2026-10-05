@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Dokter - Sistem RME</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+  <script>
+    try {
+      const user = {
+        username: 'dokter',
+        role: 'dokter',
+        name: 'dr. Budi',
+        fullName: 'dr. Budi Santoso, Sp.PD',
+        title: 'Dokter Pemeriksa',
+        loginAt: new Date().toISOString()
+      };
+      localStorage.setItem('rme_current_user', JSON.stringify(user));
+    } catch(e) {}
+    window.location.replace('../index.html#dashboard');
+  </script>
+</head>
+<body>
+  <div style="font-family: sans-serif; text-align: center; padding: 3rem;">
+    <h2>Mengarahkan ke Dashboard Dokter...</h2>
+    <p><a href="../index.html#dashboard">Klik di sini jika browser tidak otomatis mengarahkan</a></p>
+  </div>
+</body>
+</html>

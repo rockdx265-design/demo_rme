@@ -1,0 +1,164 @@
+/* ==========================================================================
+   SISTEM REKAM MEDIS ELEKTRONIK (RME) - RESPONSIVE STYLES
+   Desktop, Laptop, Tablet, and Mobile
+   ========================================================================== */
+
+/* Media Query: Tablets & Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 240px;
+  }
+
+  .dashboard-grid-2-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid-1-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .vitals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media Query: Mobile & Small Tablets (<= 768px) */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 60px;
+  }
+
+  /* Off-canvas Mobile Sidebar */
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-xl);
+    width: 280px;
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    z-index: 35;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+  }
+
+  .sidebar-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main-wrapper {
+    margin-left: 0;
+  }
+
+  .btn-sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top-navbar {
+    padding: 0 1rem;
+  }
+
+  .page-title-box h1 {
+    font-size: 1.1rem;
+  }
+
+  .page-title-box p {
+    display: none;
+  }
+
+  .system-date-badge {
+    display: none;
+  }
+
+  .content-body {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Form & KPI Grids */
+  .form-grid, .form-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .col-span-2 {
+    grid-column: span 1;
+  }
+
+  .vitals-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-queue-no {
+    font-size: 2.2rem;
+  }
+
+  .hero-patient-name {
+    font-size: 1.2rem;
+  }
+
+  .patient-info-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .modal-container {
+    max-height: 95vh;
+  }
+
+  #toast-container {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+
+  .toast {
+    min-width: 100%;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .card-header .header-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* Extra Small Devices (<= 480px) */
+@media (max-width: 480px) {
+  .vitals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-options-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .demo-role-switcher label {
+    display: none;
+  }
+}
